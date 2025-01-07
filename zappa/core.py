@@ -1326,7 +1326,6 @@ class Zappa:
             "Environment": {"Variables": aws_environment_variables},
             "KMSKeyArn": aws_kms_key_arn,
             "TracingConfig": {"Mode": "Active" if self.xray_tracing else "PassThrough"},
-            "Architectures": self.architecture,
         }
 
         if lambda_aws_config.get("PackageType", None) != "Image":
